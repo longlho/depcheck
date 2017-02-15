@@ -11,6 +11,7 @@ export default function parseTypescript(content, filePath) {
   const compileOptions = {
     module: typescript.ModuleKind.CommonJS,
     target: typescript.ScriptTarget.Latest,
+    jsx: typescript.JsxEmit.React,
   };
 
   const result = typescript.transpile(
